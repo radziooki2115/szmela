@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadDog</title>
+
+  <link rel="stylesheet" href="Gicss.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+<body>
+  <!--naviagtion bar -->
+  <header class="header">
+    <!--logo w barze-->
+    <div class="nav conteiner">
+      <a href="#" class="logo">MadDog</a>
+      <!--ikona wuzka-->
+      <nav class="navbar">
+        <ul class="nav-links">
+          
+          <li><a href="home.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Products <i class='bx bx-chevron-down'></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="webkimono.html">Kimona</a></li>
+              <li><a href="#rusguards">Rusguards</a></li>
+              <li><a href="#pasy">Pasy Do Gi</a></li>
+              <li><a href="#">Akcesoria</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Radziu</a></li>
+          <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="bx bx-menu"></i> <!-- Ikona na tel -->
+    </div>
+    
+      <i class='bx bx-shopping-bag' id="cart-icon" data-quantitiy="0"></i>
+      <!--wuzek-->
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <!--zakupy srodek wuzka-->
+        <div class="cart-content">
+          <div class="cart-box">
+            <img src="img/Kimona/BIALE/bialeprzod.png" alt="" class="cart-image">
+            <div class="detail-box">
+              <div class="cart-product-title">Product Hot altka 1</div>
+              <div class="cart-price">50$</div>
+              <input
+                type="number"
+                name="" 
+                id="" 
+                value="1" 
+                class="cart-quantity"
+              />
+            </div>
+            <!--usuwanie przedmiotow w tym wypadku alternatywek-->
+            <i class="bx bxs-trash cart-remove"></i>
+          </div>
+        </div>
+        <!--suma zakupow-->
+        <div class="total">
+          <div class="total-title"></div>
+          <div class="total-price">0$</div>
+        </div>
+        <!-- Przycisk 'Wyślij zapytanie' -->
+<div class="send-query">
+  <button id="send-query-btn">Wyślij zapytanie</button>
+</div>
+
+        <!--zamykanie wuzka-->
+        <i class='bx bx-x-circle' id="close-cart"></i>
+      </div>
+    </div>
+  </header>
+  <!--lista prodoktow-->
+  <section class="shop container">
+    <!--naglowek prodoktow-->
+    <h2 class="section-title" id="kimona">Kimono</h2>
+    <!--produkty do kupna xD-->
+    <div class="shop-content">
+      <!--produkt 1-->
+      <div class="product-box">
+        <div class="image-container">
+         
+          <img 
+            src="img/Kimona/BIALE/bialeprzod.png" 
+            alt="Białe Kimono" 
+            class="product-img default"
+          />
+          
+          <img 
+            src="img/Kimona/BIALE/bialetyl.png" 
+            alt="Brązowe Kimono" 
+            class="product-img hover"
+          />
+        </div>
+        <div class="test">
+          <h2 class="product-title">Białe Kimono</h2>
+          <span class="price">Add to cart</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+      </div>
+      
+        <div class="opis">
+          <h3 class="Tag">Specyfikacja</h3>
+          <ul>
+              <li>Odpinany kaptur ze sznurkiem</li>
+              <li>Dół bluzy i rękawy wykończone ściągaczami</li>
+              <li>Limitowana Edycja</li>
+          </ul>
+          <h2 class="section-titleopis">Kontakt</h2>
+  <section id="contact">
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Imail" required>
+      <textarea id="message" placeholder="Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+        </div>
+
+        
+  </section>
+  <script src="script.js"></script>
+  
+
+  
+</body>
+</html>

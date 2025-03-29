@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadDog</title>
+
+  <link rel="stylesheet" href="webkimono.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+<body>
+  <!--naviagtion bar -->
+  <header class="header">
+    <!--logo w barze-->
+    <div class="nav conteiner">
+      <a href="#" class="logo">MadDog</a>
+      <!--ikona wuzka-->
+      <nav class="navbar">
+        <ul class="nav-links">
+          
+          <li><a href="home.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Products <i class='bx bx-chevron-down'></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="webkimono.html">Kimona</a></li>
+              <li><a href="#rusguards">Rusguards</a></li>
+              <li><a href="#pasy">Pasy Do Gi</a></li>
+              <li><a href="#">Akcesoria</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Radziu</a></li>
+          <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <i class="bx bx-menu"></i> <!-- Ikona na tel -->
+    </div>
+    
+      <i class='bx bx-shopping-bag' id="cart-icon" data-quantitiy="0"></i>
+      <!--wuzek-->
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <!--zakupy srodek wuzka-->
+        <div class="cart-content">
+          <div class="cart-box">
+            <img src="img/Kimona/BIALE/bialeprzod.png" alt="" class="cart-image">
+            <div class="detail-box">
+              <div class="cart-product-title">Product Hot altka 1</div>
+              <div class="cart-price">50$</div>
+              <input
+                type="number"
+                name="" 
+                id="" 
+                value="1" 
+                class="cart-quantity"
+              />
+            </div>
+            <!--usuwanie przedmiotow w tym wypadku alternatywek-->
+            <i class="bx bxs-trash cart-remove"></i>
+          </div>
+        </div>
+        <!--suma zakupow-->
+        <div class="total">
+          <div class="total-title"></div>
+          <div class="total-price">0$</div>
+        </div>
+        <!-- Przycisk 'Wyślij zapytanie' -->
+<div class="send-query">
+  <button id="send-query-btn">Wyślij zapytanie</button>
+</div>
+
+        <!--zamykanie wuzka-->
+        <i class='bx bx-x-circle' id="close-cart"></i>
+      </div>
+    </div>
+  </header>
+  <!--lista prodoktow-->
+  <section class="shop container">
+    <!--naglowek prodoktow-->
+    <h2 class="section-title" id="kimona">Kimona</h2>
+    <!--produkty do kupna xD-->
+    <div class="shop-content">
+      <!--produkt 1-->
+      <div class="product-box">
+        <div class="image-container">
+          <a href="gi1white.html"> 
+            <img 
+              src="img/Kimona/BIALE/bialeprzod.png" 
+              alt="Białe Kimono" 
+              class="product-img default"
+            />
+          </a>
+          
+          <a href="gi1white.html"> 
+            <img 
+              src="img/Kimona/BIALE/bialetyl.png" 
+              alt="Brązowe Kimono" 
+              class="product-img hover"
+            />
+          </a>
+        </div>
+        
+        <div class="test">
+          <h2 class="product-title">Białe Kimono</h2>
+          <span class="price">Add to cart</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+      </div>
+      
+      
+      <!--produkt 2-->
+      
+      <div class="product-box">
+        <div class="image-container">
+          <a href="gi2blenkit.html"> 
+            <img 
+              src="img/Kimona/BLENKIT/blekitprzod.png" 
+              alt="Białe Kimono" 
+              class="product-img default"
+            />
+          </a>
+          
+          <a href="gi2blenkit.html"> 
+            <img 
+              src="img/Kimona/BLENKIT/blekitnetyl.png" 
+              alt="Brązowe Kimono" 
+              class="product-img hover"
+            />
+          </a>
+        </div>
+        
+        <div class="test">
+          <h2 class="product-title">Jasno Niebieskie Kimono</h2>
+          <span class="price">Add to cart</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+        </div>
+      </div>
+    <!--produkt 3-->
+    
+    <div class="product-box">
+      <div class="image-container">
+        <a href="gi3bordo.html">
+          <img 
+            src="img/Kimona/BORDO/bordoprzod.png" 
+            alt="Białe Kimono" 
+            class="product-img default"
+          />
+        </a>
+        
+        <a href="gi3bordo.html">
+          <img 
+            src="img/Kimona/BORDO/bordotyl.png" 
+            alt="Brązowe Kimono" 
+            class="product-img hover"
+          />
+        </a>
+      </div>
+      
+      <div class="test">
+        <h2 class="product-title">Bordowe Kimono</h2>
+        <span class="price">Add to cart</span>
+        <i class='bx bx-shopping-bag add-cart'></i>
+      </div>
+    </div>
+  <!--produkt 4-->
+  
+  <div class="product-box">
+    <div class="image-container">
+      <a href="gi3braz.html"> 
+        <img 
+          src="img/Kimona/BRAZ/brazprzod.png" 
+          alt="Białe Kimono" 
+          class="product-img default"
+        />
+      </a>
+      
+      <a href="gi3braz.html"> 
+        <img 
+          src="img/Kimona/BRAZ/braztyl.png" 
+          alt="Brązowe Kimono" 
+          class="product-img hover"
+        />
+      </a>
+    </div>
+    
+    <div class="test">
+      <h2 class="product-title">Brązowe Kimono</h2>
+      <span class="price">Add to cart</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+    </div>
+  </div>
+<!--produkt 5-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi5kremowe.html"> 
+      <img 
+        src="img/Kimona/CREME/cremeprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi5kremowe.html"> 
+      <img 
+        src="img/Kimona/CREME/cremetyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Kremowe Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 6-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi6czarne.html"> 
+      <img 
+        src="img/Kimona/CZARNE/czarneprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi6czarne.html"> 
+      <img 
+        src="img/Kimona/CZARNE/czarnetyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Czarne Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 7-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi7czerwone.html">
+      <img 
+        src="img/Kimona/CZERWONE/czerwonyprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi7czerwone.html"> 
+      <img 
+        src="img/Kimona/CZERWONE/czerwonytyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Czerwone Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+  <!--produkt 8-->
+
+  <div class="product-box">
+    <div class="image-container">
+      <a href="gi8morskie.html">
+        <img 
+          src="img/Kimona/DARKTEAL/darktealprzod.png" 
+          alt="Białe Kimono" 
+          class="product-img default"
+        />
+      </a>
+      
+      <a href="gi8morskie.html"> 
+        <img 
+          src="img/Kimona/DARKTEAL/darktealtyl.png" 
+          alt="Brązowe Kimono" 
+          class="product-img hover"
+        />
+      </a>
+    </div>
+    
+    <div class="test">
+      <h2 class="product-title">Morskie Kimono</h2>
+      <span class="price">Add to cart</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+    </div>
+  </div>
+<!--produkt 9-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi9granatowe.html"> 
+      <img 
+        src="img/Kimona/GRANAT/granatprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi9granatowe.html">
+      <img 
+        src="img/Kimona/GRANAT/granattyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Granatowe Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 10-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi10khaki.html"> 
+      <img 
+        src="img/Kimona/KHAKI/khaki2przod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi10khaki.html">
+      <img 
+        src="img/Kimona/KHAKI/khaki2tyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Khaki Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 11-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi11khaki2.html">
+      <img 
+        src="img/Kimona/KHAKICHLODNE/khakichlodneprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi11khaki2.html"> 
+      <img 
+        src="img/Kimona/KHAKICHLODNE/khakityl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Khaki 2 Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 12-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi12moro.html">
+      <img 
+        src="img/Kimona/MORO/moro1przod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi12moro.html">
+      <img 
+        src="img/Kimona/MORO/moro1tyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Moro Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 13-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi13moro2.html"> 
+      <img 
+        src="img/Kimona/MORO2/moro2przod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi13moro2.html"> 
+      <img 
+        src="img/Kimona/MORO2/moro2tyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Moro 2 Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 14-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi14niebieskie.html"> 
+      <img 
+        src="img/Kimona/NIEBIESKI/niebieskiprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi14niebieskie.html"> 
+      <img 
+        src="img/Kimona/NIEBIESKI/niebieskityl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Niebieskie Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 15-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi15pomaranczowe.html"> 
+      <img 
+        src="img/Kimona/POMARANCZOWY/pomaranczprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi15pomaranczowe.html"> 
+      <img 
+        src="img/Kimona/POMARANCZOWY/pomarancztyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Pomaranczowe Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 16-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi16purpurowe.html"> 
+      <img 
+        src="img/Kimona/PURPUROWY/purpuraprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi16purpurowe.html"> 
+      <img 
+        src="img/Kimona/PURPUROWY/purpuratyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Fieletowe Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 17-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi1white.html"> 
+      <img 
+        src="img/Kimona/ROZOWY/rozowyprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi1white.html"> 
+      <img 
+        src="img/Kimona/ROZOWY/rozowytyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Różowe Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 18-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi18.html">
+      <img 
+        src="img/Kimona/SZARE/szareprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi18.html"> 
+      <img 
+        src="img/Kimona/SZARE/szaretyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Szare Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 19-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi1white.html"> 
+      <img 
+        src="img/Kimona/ZIELONE/zielonyprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi1white.html"> 
+      <img 
+        src="img/Kimona/ZIELONE/zielonytyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Zielone Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<!--produkt 20-->
+
+<div class="product-box">
+  <div class="image-container">
+    <a href="gi1white.html"> 
+      <img 
+        src="img/Kimona/ZOLTE/zoltyprzod.png" 
+        alt="Białe Kimono" 
+        class="product-img default"
+      />
+    </a>
+    
+    <a href="gi1white.html">
+      <img 
+        src="img/Kimona/ZOLTE/zoltytyl.png" 
+        alt="Brązowe Kimono" 
+        class="product-img hover"
+      />
+    </a>
+  </div>
+  
+  <div class="test">
+    <h2 class="product-title">Żółte Kimono</h2>
+    <span class="price">Add to cart</span>
+    <i class='bx bx-shopping-bag add-cart'></i>
+  </div>
+</div>
+<script src="script.js"></script>
+  
+  
+
+  
+</body>
+</html>

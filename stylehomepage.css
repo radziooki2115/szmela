@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main--color: #fd4646;
+    --text--color: #EFBF04;
+    --background--color: #ffffff;
+    --container--color: #1e1e2a;
+}
+
+*{
+    font-family: "Poppins", serif;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    color: var(--background--color);
+    background-color: #ffffff;
+}
+
+.section{
+    padding: 4rem 0px 3rem;
+}
+
+img{
+    width: 100%;
+}
+h2{
+    color: #000000;
+}
+/* nagłowek*/
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--container--color);
+    box-shadow: 0 1px 4px hsla(0, 5%, 98%, 0.1);
+    z-index: 1000;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li{
+    position: relative;
+}
+
+.nav-links a {
+    color: var(--background-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: inline-block; 
+    transition: all 0.3s ease-in-out; 
+}
+
+.nav-links a:hover {
+    color: var(--text--color);
+    transform: scale(1.1) !important; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #32323d;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+
+.dropdown-menu a {
+    color: var(--background-color);
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown a i {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* Rozmieszczenie na barze */
+.conteiner{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+.logo{
+    font-size: 30px;
+    color: var(--background-color);
+    font-weight: 700;
+}
+
+  #rusguards { background: #3498db; }
+  #leginsy { background: #d992f5; }
+  #kimona { background: #2ecc71; }
+  #spodenki { background: #fffb20; }
+  #bluzy { background: #9948f5; }
+  #Coustom { background: #cc382e; }
+
+  
+  .sections-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    transition: background 0.5s ease;
+    scroll-snap-align: start;
+    padding-right: 1100px;
+    padding-bottom: 150px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .see-more {
+    margin-top: 10px; /* Odstęp między tekstem a linkiem */
+    color: #ffffff; /* Kolor tekstu linku */
+    text-decoration: none; /* Usuwa domyślną linię pod linkiem */
+    padding: 12px 25px; /* Większe odstępy wewnątrz linku */
+    border: 2px solid #EFBF04; /* Niebieska obramówka */
+    background-color: transparent; /* Tło przezroczyste */
+    border-radius: 20px; /* Zaokrąglone rogi */
+    display: inline-block; /* Aby link zachowywał się jak element blokowy, ale był w linii */
+    line-height: 1.2; /* Wyrównanie tekstu */
+    transition: background-color 0.3s, color 0.3s; /* Płynna zmiana tła i koloru tekstu przy hover */
+    margin-top: 30px;
+  }
+  
+  .see-more:hover {
+    background-color: #EFBF04; /* Wypełnia tło kolorem po najechaniu */
+  }
+  
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        top: 15px;
+        right: 80px;
+        cursor: pointer;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--container--color);
+        flex-direction: column;
+        width: 200px;
+        padding: 10px;
+        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    .nav-links.active {
+        display: flex;
+        transform: scale(1);
+    }
+    .dropdown-menu {
+        position: static;
+        background: none;
+        box-shadow: none;
+    }
+    .shop-content {
+        grid-template-columns: 1fr;
+    }
+    .cart {
+        width: 100%;
+    }
+    .product-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    } 
+}
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
